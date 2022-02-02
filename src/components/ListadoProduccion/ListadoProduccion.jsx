@@ -1,7 +1,8 @@
 import React from 'react';
+import H2 from '../H2';
 
 const ListadoProduccion = () => {
-  return <div><h1>listado de produccion</h1></div>;
+  return <div><H2>PRODUCCION</H2></div>;
 };
 
 export default ListadoProduccion;

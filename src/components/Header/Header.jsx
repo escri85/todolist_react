@@ -1,23 +1,23 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEyeSlash, faEye } from "@fortawesome/free-solid-svg-icons";
-
+import Button from "../Button";
 const Header = ({mostrarCompletadas,cambiarMostrarCompletadas}) => {
   const toggleCompletadas = () => {
     cambiarMostrarCompletadas(!mostrarCompletadas)
   };
   return (
     <div className="header">
-      <h1 className="header__titulo">listado de tareas</h1>
+      <h1 className="header__titulo">LISTADO DE TAREAS</h1>
       {mostrarCompletadas ? (
-        <button className="header__boton" onClick={toggleCompletadas}>
+        <Button className="header__boton" onClick={toggleCompletadas}>
           ocultar tareas completadas
           <FontAwesomeIcon className="icono" icon={faEyeSlash} />
-        </button>
+        </Button>
       ) : (
-        <button className="header__boton" onClick={toggleCompletadas}>
+        <Button className="header__boton" onClick={toggleCompletadas}>
           tareas completadas
           <FontAwesomeIcon className="icono" icon={faEye} />
-        </button>
+        </Button>
       )}
     </div>
   );

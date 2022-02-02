@@ -42,19 +42,22 @@ function App() {
     localStorage.setItem("mostrarCompletadas", mostrarCompletadas.toString());
   }, [mostrarCompletadas]);
   return (
+    <div className="app">
+    
     <div className="App">
       <Header
         mostrarCompletadas={mostrarCompletadas}
         cambiarMostrarCompletadas={cambiarMostrarCompletadas}
       />
       <Formulario tareas={tareas} cambiarTareas={cambiarTareas} />
+    </div>
       <div className="listados">
         <ListadoInicio
           tareas={tareas}
           cambiarTareas={cambiarTareas}
           mostrarCompletadas={mostrarCompletadas}
         />
-        <ListadoPlanificacion />
+        <ListadoPlanificacion  tareas={tareas}/>
         <ListadoImplementacion />
         <ListadoRevision />
         <ListadoProduccion />

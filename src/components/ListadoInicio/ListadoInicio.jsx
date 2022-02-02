@@ -1,6 +1,8 @@
 /* eslint-disable array-callback-return */
 import React from 'react';
 import Tarea from '../Tarea/Tarea';
+import H2 from '../H2';
+
 const ListadoInicio = ({tareas, cambiarTareas, mostrarCompletadas}) => {
 	const toggleCompletada = (id) => {
 		cambiarTareas(tareas.map((tarea) => {
@@ -32,7 +34,7 @@ const ListadoInicio = ({tareas, cambiarTareas, mostrarCompletadas}) => {
 
 	return (
         <div>
-            <h2>INICIO</h2>
+            <H2>INICIO</H2>
 		<ul className="lista-tareas">
 			{tareas.length > 0 ? tareas.map((tarea) => {
 				if(mostrarCompletadas){
